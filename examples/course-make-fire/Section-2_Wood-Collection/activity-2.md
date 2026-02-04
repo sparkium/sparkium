@@ -4,7 +4,7 @@ material-type: page
 title: Identify and Classify Firewood
 section: section-2-wood-collection
 order: 3
-estimated_duration: "15–20 minutes"
+estimated_duration: 15–20 minutes
 location: outdoor-or-indoor
 learning_objectives:
   - Distinguish tinder, kindling, and fuel wood

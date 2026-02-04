@@ -4,7 +4,7 @@ material-type: page
 title: Assess Fire Risk in an Outdoor Environment
 section: section-1-preparation
 order: 2
-estimated_duration: "15–20 minutes"
+estimated_duration: 15–20 minutes
 location: outdoor
 learning_objectives:
   - Identify potential fire hazards

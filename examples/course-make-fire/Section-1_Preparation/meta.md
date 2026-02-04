@@ -4,7 +4,7 @@ title: Preparation for Making A Fire
 subtitle: Safety Comes First
 language: en
 level: beginner
-estimated_duration: "20 minutes"
+estimated_duration: 20 minutes
 prerequisites:
   - No prior outdoor experience required
 learning-materials:

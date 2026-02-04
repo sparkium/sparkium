@@ -4,9 +4,9 @@ material-type: slides
 format: pptx
 section: section-2-wood-collection
 order: 1
-estimated_duration: "20 minutes"
+estimated_duration: 20 minutes
 file-name: wood-basics.pptx
-key_concepts:
+keywords:
   - tinder
   - kindling
   - fuel wood

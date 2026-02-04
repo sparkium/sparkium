@@ -3,7 +3,7 @@ category: task
 title: Collect and Sort Firewood
 section: section-2-wood-collection
 order: 4
-estimated_duration: "30–40 minutes"
+estimated_duration: 30–40 minutes
 difficulty: beginner
 completion_criteria:
   - Tinder collected
