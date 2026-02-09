@@ -1,0 +1,15 @@
+course_id: OUTD-101
+title: Outdoor Basics
+subtitle: A survival primer
+language: en
+level: beginner
+estimated_duration: 2h
+prerequisites: []
+learning_goals:
+  - Light a fire safely
+  - Build a shelter
+sections:
+  - preparation
+  - fire-starting
+author: Joe Doe
+last_updated: 2026-02-09

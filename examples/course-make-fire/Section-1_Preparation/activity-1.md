@@ -15,4 +15,4 @@ learning_objectives:
 
 In this activity, you will practice **assessing fire safety**  without lighting any fire.
 
-Your goal is to learn how to recognize **unsafe environments**.
+Your goal is to learn how to recognize **unsafe environments**.         
