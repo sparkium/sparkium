@@ -1,12 +1,12 @@
-section_id: fire-starting
+section_id: 02-fire-starting
 title: Ignition Techniques
 subtitle: Spark, Friction, & Solar
 language: en
 level: beginner
-estimated_duration: 35 minutes
+estimated_duration_seconds: 2100
 prerequisites:
-  - section: preparation
+  - section: 01-preparation
 learning_materials:
   - 010-strike-demo.video.mp4
-author: Jane Forest
+author: Joe Doe
 last_updated: 2026-02-09

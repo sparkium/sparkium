@@ -3,5 +3,5 @@ material_type: slides
 format: pptx
 section: 01-preparation
 order: 20
-estimated_duration: 10 minutes
+estimated_duration_seconds: 600
 keywords: [fire-triangle, science, safety]

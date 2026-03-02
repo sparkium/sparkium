@@ -3,13 +3,12 @@ title: Outdoor Basics
 subtitle: A survival primer
 language: en
 level: beginner
-estimated_duration: 2h
+estimated_duration_seconds: 7200
 prerequisites: []
 learning_goals:
   - Light a fire safely
   - Build a shelter
 sections:
-  - preparation
-  - fire-starting
+  - 01-preparation
 author: Joe Doe
 last_updated: 2026-02-09

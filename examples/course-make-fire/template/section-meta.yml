@@ -3,10 +3,10 @@ title: Preparation for Making a Fire
 subtitle: Safety Comes First
 language: en
 level: beginner
-estimated_duration: 20 minutes
+estimated_duration_seconds: 1200
 prerequisites: []
 learning_materials:
-  - assets/prep/010-fire-basics.slides.pptx
-  - assets/prep/020-safety-checklist.pdf
+  - examples/course-make-fire/sections/01_preparation/010-safety-checklist.pdf
+  - examples/course-make-fire/sections/01_preparation/020-fire-triangle.slides.pptx
 author: Joe Doe
 last_updated: 2026-02-09

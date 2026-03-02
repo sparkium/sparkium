@@ -1,12 +1,12 @@
-section_id: preparation
+section_id: 01-preparation
 title: Preparation & Safety
 subtitle: Safety Comes First
 language: en
 level: beginner
-estimated_duration: 25 minutes
+estimated_duration_seconds: 1500
 prerequisites: []
 learning_materials:
   - 010-safety-checklist.pdf
   - 020-fire-triangle.slides.pptx
-author: Jane Forest
+author: Joe Doe
 last_updated: 2026-02-09
