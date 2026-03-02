@@ -6,7 +6,6 @@ level: beginner
 estimated_duration_seconds: 1200
 prerequisites: []
 learning_materials:
-  - examples/course-make-fire/sections/01_preparation/010-safety-checklist.pdf
-  - examples/course-make-fire/sections/01_preparation/020-fire-triangle.slides.pptx
+  - template.pdf
 author: Joe Doe
 last_updated: 2026-02-09
