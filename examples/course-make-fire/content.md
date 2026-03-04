@@ -1,3 +1,4 @@
+---
 course_id: FIRE-101
 title: How to Make a Fire?
 subtitle: From Spark to Flame Safely
@@ -16,3 +17,6 @@ sections:
   - 02-fire-starting
   - 03-cleanup
 author: John Doe
+---
+
+# Make fire
