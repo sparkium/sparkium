@@ -8,7 +8,7 @@ estimated_duration_seconds: 2100
 prerequisites:
   - section: 01-preparation
 learning_materials:
-  - 010-strike-demo.video.mp4
+  - 010-strike-demo.mp4
 author: Joe Doe
 ---
 
