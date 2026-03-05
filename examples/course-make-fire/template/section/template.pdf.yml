@@ -1,0 +1,29 @@
+file: template.pdf
+format: pdf
+title: Document Template
+description: A generic template document for creating structured PDFs.
+
+author: John Doe
+creator: Adobe InDesign
+producer: Adobe PDF Library
+
+created_at: 2026-02-01T10:15:00Z
+modified_at: 2026-02-03T14:20:00Z
+
+pages: 5
+file_size_bytes: 245760
+language: en
+
+keywords:
+  - template
+  - document
+  - layout
+
+subject: Document Template Example
+
+security:
+  encrypted: false
+  printable: true
+  copyable: true
+
+pdf_version: "1.7"

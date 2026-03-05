@@ -1,4 +1,22 @@
 ---
+course_id: FIRE-101
+title: How to Make a Fire?
+subtitle: From Spark to Flame Safely
+language: en
+level: beginner
+estimated_duration_seconds: 5400
+prerequisites:
+  - Comfortable being outdoors
+learning_goals:
+  - Understand the fire triangle
+  - Choose safe ignition tools
+  - Light a fire without matches
+  - Extinguish and leave-no-trace
+sections:
+  - 01-preparation
+  - 02-fire-starting
+  - 03-cleanup
+author: John Doe
 ---
 
-# Course title
+# Make fire
