@@ -8,3 +8,7 @@
 - Bestandteile referenzierbar machen:
   - Jede Aufgabe, jeder Vorschlag und jedes Quiz sollte eine eindeutige ID haben, damit sie leicht referenziert werden können.
   - Teilschritte, Fragen und andere Einzelteile sollten ebenfalls referenzierbar sein, um eine klare Struktur zu gewährleisten.
+- Gleichmässige Strukturierung von Inhalten:
+  1. Einleitung, Ziele, Überblick
+  2. Inhalt, Aufgaben, Schritte
+  3. Weiterführende Informationen, weitere Vertiefung, nächste Schritte
