@@ -1,4 +1,3 @@
 # Sparkium
 
-A modern data schema for storing eLearning content.
-
+Modern file-based eLearning schemas.

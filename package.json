@@ -1,0 +1,8 @@
+{
+  "name": "sparkium",
+  "version": "0.0.1",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "nx": "22.5.4"
+  }
+}
