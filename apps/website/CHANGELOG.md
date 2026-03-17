@@ -1,5 +1,11 @@
 # @sparkium/website
 
+## 0.0.6
+
+### Patch Changes
+
+- 99c3fed: Set domain name
+
 ## 0.0.5
 
 ### Patch Changes
