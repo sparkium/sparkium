@@ -1,0 +1,22 @@
+{
+  "editor.rulers": [
+    120
+  ],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[mdx]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.language": "en,de-ch",
+  "json.schemaDownload.trustedDomains": {
+    "https://docs.renovatebot.com": true,
+    "https://unpkg.com/@changesets": true
+  },
+}
