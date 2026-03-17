@@ -1,7 +1,19 @@
 {
   "name": "sparkium",
+  "description": "Sparkium: Modern file-based eLearning schemas.",
+  "private": true,
   "version": "0.0.1",
   "license": "Apache-2.0",
+  "scripts": {
+    "build": "pnpm exec nx run-many --nx-bail --target=build --parallel 10 --output-style stream",
+    "dev": "pnpm exec nx run-many --nx-bail --target=dev --parallel 10 --output-style stream"
+  },
+  "author": {
+    "name": "Code for Humans",
+    "email": "hi@code-for-humans.com",
+    "url": "https://code-for-humans.com"
+  },
+  "packageManager": "pnpm@10.32.1",
   "devDependencies": {
     "nx": "22.5.4"
   }

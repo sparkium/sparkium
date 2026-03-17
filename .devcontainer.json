@@ -1,4 +1,12 @@
 {
   "name": "Sparkium",
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:4-24-trixie"
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:4-24-trixie",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "unifiedjs.vscode-mdx",
+        "astro-build.astro-vscode"
+      ]
+    }
+  }
 }
