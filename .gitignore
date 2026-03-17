@@ -238,8 +238,8 @@ $RECYCLE.BIN/
 
 .pnpm-store
 
-
-
 .nx/cache
 .nx/workspace-data
 .nx/polygraph
+
+.astro

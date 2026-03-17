@@ -1,7 +1,9 @@
-onlyBuiltDependencies:
-  - nx
 
 packages:
   - "apps/*"
 
 autoInstallPeers: true
+onlyBuiltDependencies:
+  - esbuild
+  - nx
+  - sharp
