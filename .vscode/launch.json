@@ -2,8 +2,8 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "command": "./node_modules/.bin/astro dev",
-      "name": "website:dev",
+      "command": "pnpm exec nx run @sparkium/website:dev",
+      "name": "@sparkium/website:dev (Nx)",
       "request": "launch",
       "type": "node-terminal"
     }
