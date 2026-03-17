@@ -57,7 +57,7 @@ jobs:
     if: needs.publish.result == 'success' && needs.publish.outputs.publishedPackages != '' && contains(fromJson(needs.publish.outputs.publishedPackages).*.name, '@sparkium/website')
     name: Deploy website (GitHub Pages)
     environment:
-      name: website
+      name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
