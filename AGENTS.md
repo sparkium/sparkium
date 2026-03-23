@@ -1,3 +1,9 @@
+# Project description
+
+**Name**: Sparkium
+**Slogan**: The blueprint for eLearning creators.
+**Description**: Sparkium is a multi-module schema designed to revolutionize the eLearning industry. The goal is to make it easier for content creators, educators, and developers to create, manage, and distribute educational content. By providing a modern standardized specification for eLearning materials, Sparkium aims to enhance the learning experience and foster collaboration across the industry. It helps to make your eLearning content more accessible, reusable, interoperable, future-proof and way easier to manage changes and updates.
+
 <!-- nx configuration start-->
 <!-- Leave the start & end comments to automatically receive updates. -->
 

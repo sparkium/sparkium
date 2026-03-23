@@ -10,5 +10,8 @@
         "streetsidesoftware.code-spell-checker-swiss-german"
       ]
     }
+  },
+  "containerEnv": {
+    "ASTRO_TELEMETRY_DISABLED": "1"
   }
 }
