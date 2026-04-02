@@ -6,7 +6,8 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
   integrations: [
     starlight({
-      title: 'My Docs',
+      title: 'Sparkium',
+      logo: { src: './src/assets/logo.svg', alt: 'Sparkium Logo' },
       social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
       sidebar: [
         {
