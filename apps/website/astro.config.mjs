@@ -4,11 +4,13 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://www.sparkium.org",
   integrations: [
     starlight({
       title: 'Sparkium',
+      customCss: ["./src/style.css"],
       logo: { src: './src/assets/logo.svg', alt: 'Sparkium Logo' },
-      social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+      social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/sparkium' }, { icon: 'linkedin', label: 'LinkedIn', href: 'https://linkedin.com/company/sparkium' }],
       sidebar: [
         {
           label: 'Guides',
