@@ -1,5 +1,12 @@
 # @sparkium/website
 
+## 0.0.7
+
+### Patch Changes
+
+- a21d54b: Set colors
+- c11ecb0: Set website logo
+
 ## 0.0.6
 
 ### Patch Changes
