@@ -16,15 +16,16 @@ export default defineConfig({
       social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/sparkium' }, { icon: 'linkedin', label: 'LinkedIn', href: 'https://linkedin.com/company/sparkium' }],
       sidebar: [
         {
-          label: 'Guides',
-          items: [
-            // Each item here is one entry in the navigation menu.
-            { label: 'Example Guide', slug: 'guides/example' },
-          ],
+          label: 'Start here',
+          autogenerate: { directory: 'start-here' },
         },
         {
-          label: 'Reference',
-          autogenerate: { directory: 'reference' },
+          label: 'Guides',
+          autogenerate: { directory: 'guides' },
+        },
+        {
+          label: 'Ecosystem',
+          autogenerate: { directory: 'ecosystem' },
         },
       ],
     }),
