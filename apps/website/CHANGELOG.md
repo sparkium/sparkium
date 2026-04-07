@@ -1,5 +1,11 @@
 # @sparkium/website
 
+## 0.0.10
+
+### Patch Changes
+
+- 5e14301: Fix hero link
+
 ## 0.0.9
 
 ### Patch Changes
