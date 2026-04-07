@@ -1,5 +1,11 @@
 # @sparkium/website
 
+## 0.0.9
+
+### Patch Changes
+
+- 4e5f32f: Fix header styles
+
 ## 0.0.8
 
 ### Patch Changes
