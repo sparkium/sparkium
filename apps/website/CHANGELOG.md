@@ -1,5 +1,12 @@
 # @sparkium/website
 
+## 0.0.8
+
+### Patch Changes
+
+- ecef15d: Add landing page content
+- d93a5f2: Scaffold content structure
+
 ## 0.0.7
 
 ### Patch Changes
