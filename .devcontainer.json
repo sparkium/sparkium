@@ -4,10 +4,18 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "unifiedjs.vscode-mdx",
         "astro-build.astro-vscode",
+        "vitest.explorer",
         "streetsidesoftware.code-spell-checker",
-        "streetsidesoftware.code-spell-checker-swiss-german"
+        "streetsidesoftware.code-spell-checker-swiss-german",
+        "esbenp.prettier-vscode",
+        "mgmcdermott.vscode-language-babel",
+        "dbaeumer.vscode-eslint",
+        "eliostruyf.vscode-front-matter",
+        "unifiedjs.vscode-mdx",
+        "github.vscode-github-actions",
+        "GitHub.vscode-pull-request-github",
+        "vunguyentuan.vscode-css-variables"
       ]
     }
   },

@@ -40,5 +40,8 @@ jobs:
         run: pnpm install --frozen-lockfile
         working-directory: ${{ env.BUILD_PATH }}
 
+      - name: Check with ESLint and Prettier
+        run: pnpm check
+
       - name: Build
         run: pnpm build
