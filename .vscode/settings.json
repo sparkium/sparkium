@@ -17,7 +17,8 @@
   "cSpell.language": "en,de-ch",
   "json.schemaDownload.trustedDomains": {
     "https://docs.renovatebot.com": true,
-    "https://unpkg.com/@changesets": true
+    "https://unpkg.com/@changesets": true,
+    "https://frontmatter.codes/frontmatter.schema.json": true
   },
   "cSpell.words": [
     "Sparkium"
