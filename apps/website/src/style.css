@@ -1,4 +1,3 @@
-/* Dark mode colors. */
 :root {
   --sl-color-accent-low: #0e2343;
   --sl-color-accent: #0063d5;
@@ -14,7 +13,7 @@
   --sl-content-width: 55rem;
   --sl-text-6xl: 3rem;
 }
-/* Light mode colors. */
+
 :root[data-theme="light"] {
   --sl-color-accent-low: #c3d9f8;
   --sl-color-accent: #004ca6;
@@ -28,4 +27,34 @@
   --sl-color-gray-6: #e0f0ff;
   --sl-color-gray-7: #eff7ff;
   --sl-color-black: #ffffff;
+}
+
+[data-chapter-number] .sl-markdown-content {
+  counter-reset: sl-h2counter 0;
+}
+
+[data-chapter-number] .sl-markdown-content h2 {
+  counter-increment: sl-h2counter;
+  counter-reset: sl-h3counter 0;
+}
+
+[data-chapter-number] .sl-markdown-content h2::before {
+  content: counter(sl-chapter) "." counter(sl-h2counter) "\00a0";
+}
+
+[data-chapter-number] .sl-markdown-content h3 {
+  counter-increment: sl-h3counter;
+  counter-reset: sl-h4counter 0;
+}
+
+[data-chapter-number] .sl-markdown-content h3::before {
+  content: counter(sl-chapter) "." counter(sl-h2counter) "." counter(sl-h3counter) "\00a0";
+}
+
+[data-chapter-number] .sl-markdown-content h4 {
+  counter-increment: sl-h4counter;
+}
+
+[data-chapter-number] .sl-markdown-content h4::before {
+  content: counter(sl-chapter) "." counter(sl-h2counter) "." counter(sl-h3counter) "." counter(sl-h4counter) "\00a0";
 }

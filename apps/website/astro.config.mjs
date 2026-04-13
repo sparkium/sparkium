@@ -8,8 +8,11 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Sparkium",
+      routeMiddleware: "./src/utils/routeData.ts",
       components: {
         Header: "./src/overrides/Header.astro",
+        MarkdownContent: "./src/overrides/MarkdownContent.astro",
+        PageTitle: "./src/overrides/PageTitle.astro",
       },
       customCss: ["./src/style.css"],
       logo: { src: "./src/assets/logo.svg", alt: "Sparkium Logo" },
@@ -23,8 +26,8 @@ export default defineConfig({
           autogenerate: { directory: "start-here" },
         },
         {
-          label: "Guides",
-          autogenerate: { directory: "guides" },
+          label: "Guide",
+          autogenerate: { directory: "guide", attrs: { "data-chapter-group": true } },
         },
         {
           label: "Ecosystem",
