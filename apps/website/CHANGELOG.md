@@ -1,5 +1,11 @@
 # @sparkium/website
 
+## 0.0.13
+
+### Patch Changes
+
+- 5489037: Downgrade pnpm action setup
+
 ## 0.0.12
 
 ### Patch Changes
