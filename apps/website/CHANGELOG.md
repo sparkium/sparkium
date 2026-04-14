@@ -1,5 +1,11 @@
 # @sparkium/website
 
+## 0.0.11
+
+### Patch Changes
+
+- 34b8faf: Add chapter numbering
+
 ## 0.0.10
 
 ### Patch Changes
