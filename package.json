@@ -17,7 +17,7 @@
     "email": "hi@code-for-humans.com",
     "url": "https://code-for-humans.com"
   },
-  "packageManager": "pnpm@10.33.0",
+  "packageManager": "pnpm@10.33.1",
   "devDependencies": {
     "@changesets/cli": "^2.30.0",
     "@eslint/js": "^10.0.1",
