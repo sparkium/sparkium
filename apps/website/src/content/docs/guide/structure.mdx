@@ -5,9 +5,9 @@ sidebar:
   order: 1
 ---
 
-import HierarchyVisual from "../../../assets/hierarchy.excalidraw.svg";
+import { FileTree } from '@astrojs/starlight/components';
 
-In Sparkium, the organization of your eLearning materials happens through the file system. The structuring should feel natural and intuitive, like when you organize your personal files on your computer. This approach allows you to easily manage and navigate through your materials without needing to learn a complex system.
+**In Sparkium, the organization of your eLearning materials happens through the file system.** The structuring should feel natural and intuitive, like when you organize your personal files on your computer. This approach allows you to easily manage and navigate through your materials without needing to learn a complex system.
 
 ## Hierarchy
 
@@ -15,4 +15,14 @@ The hierarchy of your materials is determined by the folder structure. Each fold
 
 The **root folder** is the starting point. This folder represents the entire eLearning project or course. Inside the root folder, you can create subfolders to further structure project. For example, you might have a folder for each module of your course, and within those folders, you might have files for each lesson or topic.
 
-<HierarchyVisual />
+<FileTree>
+
+- mastering-the-swiss-flame
+  - module-1
+    - lesson-1.md
+    - lesson-2.md
+  - module-2
+    - lesson-1.md
+    - lesson-2.md
+
+</FileTree>
