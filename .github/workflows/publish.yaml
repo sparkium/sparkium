@@ -89,7 +89,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build & generate schemas
-        run: pnpm exec nx run @sparkium/types:generate-schemas
+        run: pnpm exec nx run @sparkium/types:build
 
       - name: Configure SSH
         run: |
