@@ -52,6 +52,68 @@ jobs:
     outputs:
       publishedPackages: ${{ steps.changesets.outputs.publishedPackages }}
 
+  deploy-schema:
+    needs: publish
+    if: needs.publish.result == 'success' && needs.publish.outputs.publishedPackages != '' && contains(fromJson(needs.publish.outputs.publishedPackages).*.name, '@sparkium/types')
+    name: Deploy schemas (schema.sparkium.org)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve types tag
+        id: types-tag
+        run: |
+          VERSION=$(echo '${{ needs.publish.outputs.publishedPackages }}' | jq -r '.[] | select(.name=="@sparkium/types") | .version' | head -n 1)
+          if [ -z "$VERSION" ] || [ "$VERSION" = "null" ]; then
+            echo "Could not resolve @sparkium/types version from publishedPackages"
+            exit 1
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "tag=@sparkium/types@$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ steps.types-tag.outputs.tag }}
+          fetch-depth: 0
+          filter: tree:0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build & generate schemas
+        run: pnpm exec nx run @sparkium/types:generate-schemas
+
+      - name: Configure SSH
+        run: |
+          install -m 700 -d ~/.ssh
+          echo "${{ secrets.SCHEMA_REPO_DEPLOY_KEY }}" > ~/.ssh/schema_deploy_key
+          chmod 600 ~/.ssh/schema_deploy_key
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          echo "IdentityFile ~/.ssh/schema_deploy_key" >> ~/.ssh/config
+
+      - name: Push schemas to sparkium/schema
+        env:
+          VERSION: ${{ steps.types-tag.outputs.version }}
+        run: |
+          git clone git@github.com:sparkium/schema.git /tmp/schema-repo
+
+          cp -r libs/types/dist/schemas/$VERSION /tmp/schema-repo/$VERSION
+
+          cd /tmp/schema-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "$VERSION"
+          git commit -m "chore: add schemas for @sparkium/types@$VERSION"
+          git push
+
   deploy-website:
     needs: publish
     if: needs.publish.result == 'success' && needs.publish.outputs.publishedPackages != '' && contains(fromJson(needs.publish.outputs.publishedPackages).*.name, '@sparkium/website')

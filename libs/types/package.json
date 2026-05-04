@@ -1,0 +1,25 @@
+{
+  "name": "@sparkium/types",
+  "version": "0.0.1",
+  "description": "TypeBox schemas and TypeScript types for the Sparkium eLearning specification.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@sinclair/typebox": "^0.34.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.4",
+    "typescript": "^5.9.3"
+  }
+}
