@@ -23,4 +23,24 @@
   "cSpell.words": [
     "Sparkium"
   ],
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "**/course.config.json"
+      ],
+      "url": "./libs/types/dist/schemas/latest/course.json"
+    },
+    {
+      "fileMatch": [
+        "**/module.config.json"
+      ],
+      "url": "./libs/types/dist/schemas/latest/module.json"
+    },
+    {
+      "fileMatch": [
+        "**/material.config.json"
+      ],
+      "url": "./libs/types/dist/schemas/latest/material.json"
+    }
+  ]
 }

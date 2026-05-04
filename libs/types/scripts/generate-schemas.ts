@@ -13,7 +13,7 @@
  *   pnpm exec nx run @sparkium/types:generate-schemas
  */
 
-import { writeFileSync, mkdirSync } from "node:fs";
+import { writeFileSync, mkdirSync, rmSync, symlinkSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { CourseSchema, ModuleSchema, MaterialSchema } from "../src/index.js";
@@ -26,7 +26,9 @@ const { version } = packageJson;
 
 const schemas = [CourseSchema, ModuleSchema, MaterialSchema];
 
-const outDir = join(__dirname, "..", "dist", "schemas", version);
+const schemasDir = join(__dirname, "..", "dist", "schemas");
+const outDir = join(schemasDir, version);
+const latestLink = join(schemasDir, "latest");
 mkdirSync(outDir, { recursive: true });
 
 for (const schema of schemas) {
@@ -39,5 +41,12 @@ for (const schema of schemas) {
   writeFileSync(join(outDir, filename), JSON.stringify(output, null, 2) + "\n");
   console.log(`  ✓ dist/schemas/${version}/${filename}`);
 }
+
+// Point latest/ symlink at the current version folder
+if (existsSync(latestLink)) {
+  rmSync(latestLink, { recursive: true });
+}
+symlinkSync(version, latestLink);
+console.log(`  ✓ dist/schemas/latest → ${version} (symlink)`);
 
 console.log(`\nGenerated ${schemas.length} schemas → dist/schemas/${version}/`);
