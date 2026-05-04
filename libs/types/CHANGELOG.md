@@ -1,5 +1,11 @@
 # @sparkium/types
 
+## 0.0.3
+
+### Patch Changes
+
+- 10917db: Add latest schemas symlinking
+
 ## 0.0.2
 
 ### Patch Changes
