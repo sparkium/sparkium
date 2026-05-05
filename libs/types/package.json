@@ -15,6 +15,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@sinclair/typebox": "^0.34.0"
   },
