@@ -107,6 +107,9 @@ jobs:
 
           cp -r libs/types/dist/schemas/$VERSION /tmp/schema-repo/$VERSION
 
+          rm -f /tmp/schema-repo/latest
+          ln -s "$VERSION" /tmp/schema-repo/latest
+
           cd /tmp/schema-repo
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -117,7 +120,7 @@ jobs:
   deploy-website:
     needs: publish
     if: needs.publish.result == 'success' && needs.publish.outputs.publishedPackages != '' && contains(fromJson(needs.publish.outputs.publishedPackages).*.name, '@sparkium/website')
-    name: Deploy website (GitHub Pages)
+    name: Deploy website (sparkium.org)
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
