@@ -1,5 +1,11 @@
 # @sparkium/types
 
+## 0.0.7
+
+### Patch Changes
+
+- 68ea21a: Modify publish configuration
+
 ## 0.0.6
 
 ### Patch Changes
