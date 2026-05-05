@@ -33,7 +33,6 @@ jobs:
           cache: pnpm
           node-version: 24
           registry-url: https://registry.npmjs.org
-          scope: "@sparkium"
 
       - name: Install dependencies
         run: pnpm install
@@ -43,9 +42,10 @@ jobs:
         id: changesets
         with:
           version: pnpm version
-          publish: NODE_AUTH_TOKEN="" pnpm release
+          publish: pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ""
 
     outputs:
       publishedPackages: ${{ steps.changesets.outputs.publishedPackages }}
