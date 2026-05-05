@@ -45,7 +45,8 @@ jobs:
           publish: pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ""
+          NPM_TOKEN: ""
+          NPM_CONFIG_PROVENANCE: true
 
     outputs:
       publishedPackages: ${{ steps.changesets.outputs.publishedPackages }}
