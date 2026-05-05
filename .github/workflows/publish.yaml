@@ -45,9 +45,10 @@ jobs:
         id: changesets
         with:
           version: pnpm version
-          publish: pnpm tag
+          publish: pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     outputs:
       publishedPackages: ${{ steps.changesets.outputs.publishedPackages }}
