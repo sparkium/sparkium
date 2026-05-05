@@ -4,6 +4,11 @@
   "description": "TypeBox schemas and TypeScript types for the Sparkium eLearning specification.",
   "type": "module",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sparkium/sparkium.git",
+    "directory": "libs/types"
+  },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
