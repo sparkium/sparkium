@@ -43,7 +43,7 @@ jobs:
         id: changesets
         with:
           version: pnpm version
-          publish: pnpm release
+          publish: NODE_AUTH_TOKEN="" pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
