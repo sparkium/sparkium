@@ -1,5 +1,11 @@
 # @sparkium/types
 
+## 0.0.6
+
+### Patch Changes
+
+- bbfc127: Publish to public
+
 ## 0.0.5
 
 ### Patch Changes
