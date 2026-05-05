@@ -6,6 +6,7 @@ import { Type, type Static } from "@sinclair/typebox";
  */
 export const CourseSchema = Type.Object(
   {
+    $schema: Type.Optional(Type.String({ description: "JSON Schema reference URI." })),
     title: Type.String({ minLength: 1, description: "Human-readable title of the course." }),
     description: Type.Optional(Type.String({ description: "Short summary of what the course covers." })),
     version: Type.Optional(Type.String({ description: "Semantic version of the course content." })),
@@ -23,6 +24,7 @@ export const CourseSchema = Type.Object(
     $id: "course",
     title: "Course",
     description: "Configuration schema for a Sparkium eLearning course.",
+    additionalProperties: false,
   },
 );
 

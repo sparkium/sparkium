@@ -5,6 +5,7 @@ import { Type, type Static } from "@sinclair/typebox";
  */
 export const MaterialSchema = Type.Object(
   {
+    $schema: Type.Optional(Type.String({ description: "JSON Schema reference URI." })),
     title: Type.String({ minLength: 1, description: "Human-readable title of the material." }),
     description: Type.Optional(Type.String({ description: "Short summary shown in navigation and previews." })),
     type: Type.Optional(
@@ -30,6 +31,7 @@ export const MaterialSchema = Type.Object(
     $id: "material",
     title: "Material",
     description: "Front-matter schema for a Sparkium eLearning material (lesson, exercise, etc.).",
+    additionalProperties: false,
   },
 );
 

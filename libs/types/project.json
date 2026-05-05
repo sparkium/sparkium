@@ -27,6 +27,20 @@
         "cwd": "{projectRoot}"
       }
     },
+    "dev": {
+      "executor": "nx:run-commands",
+      "outputs": [
+        "{projectRoot}/dist"
+      ],
+      "options": {
+        "commands": [
+          "tsc -p tsconfig.json --watch",
+          "tsx watch scripts/generate-schemas.ts"
+        ],
+        "parallel": true,
+        "cwd": "{projectRoot}"
+      }
+    },
     "typecheck": {
       "executor": "nx:run-commands",
       "options": {
