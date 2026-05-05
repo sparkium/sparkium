@@ -1,5 +1,11 @@
 # @sparkium/types
 
+## 0.0.4
+
+### Patch Changes
+
+- 8e53024: Fix push schemas step in publication workflow
+
 ## 0.0.3
 
 ### Patch Changes
