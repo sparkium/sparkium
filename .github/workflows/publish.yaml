@@ -25,13 +25,15 @@ jobs:
           filter: tree:0
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v5
+        uses: pnpm/action-setup@v6
 
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
           cache: pnpm
           node-version: 24
+          scope: "@sparkium"
+          registry-url: https://registry.npmjs.org
 
       - name: Install dependencies
         run: pnpm install
@@ -44,7 +46,6 @@ jobs:
           publish: pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ""
           NPM_CONFIG_PROVENANCE: true
 
     outputs:
