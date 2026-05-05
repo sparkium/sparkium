@@ -1,5 +1,11 @@
 # @sparkium/website
 
+## 0.0.14
+
+### Patch Changes
+
+- 5acb3ff: Configure trusted publication
+
 ## 0.0.13
 
 ### Patch Changes
