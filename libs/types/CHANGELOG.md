@@ -1,5 +1,11 @@
 # @sparkium/types
 
+## 0.0.11
+
+### Patch Changes
+
+- 4c36d62: Configure trusted publishing
+
 ## 0.0.10
 
 ### Patch Changes
