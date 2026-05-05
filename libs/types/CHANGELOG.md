@@ -1,5 +1,11 @@
 # @sparkium/types
 
+## 0.0.5
+
+### Patch Changes
+
+- 53418e9: Publish to NPM
+
 ## 0.0.4
 
 ### Patch Changes
