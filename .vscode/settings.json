@@ -16,6 +16,7 @@
   },
   "cSpell.language": "en,de-ch",
   "json.schemaDownload.trustedDomains": {
+    "http://json.schemastore.org": true,
     "https://docs.renovatebot.com": true,
     "https://unpkg.com/@changesets": true,
     "https://frontmatter.codes/frontmatter.schema.json": true,
