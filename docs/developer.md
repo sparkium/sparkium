@@ -1,8 +1,19 @@
 # Developers
 
+Getting started with Sparkium development is easy!
+
+1. Make sure you have [Docker](https://docs.docker.com/get-docker/) or another OCI runtime up and running
+2. Get [Visual Studio Code](https://code.visualstudio.com) with [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers) ready
+3. Open the project in the Dev Container and run `pnpm install`
+4. Start the development server with `pnpm dev`
+5. Make some changes
+6. Run tests with `pnpm test`
+7. Check the project with `pnpm check`
+8. Read about further steps in here
+
 ## Continuous Deployment
 
-### Set up new NPM package publication
+### Set up a new NPM package publication
 
 To set up trusted publishing for a new NPM package, follow these steps once:
 
