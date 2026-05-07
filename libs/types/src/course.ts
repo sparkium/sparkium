@@ -49,12 +49,15 @@ export const CourseSchema = Type.Composite(
           ),
         ]),
       ),
-      language: Type.Optional(
-        Type.String({
-          pattern: "^[a-z]{2,3}(-[A-Z]{2,3})?$",
-          description: 'BCP 47 language tag, e.g. "en", "de-CH".',
-          examples: ["en", "de", "de-CH", "fr"],
-        }),
+      languages: Type.Optional(
+        Type.Array(
+          Type.String({
+            pattern: "^[a-z]{2,3}(-[A-Z]{2,3})?$",
+            description: 'BCP 47 language tag, e.g. "en", "de-CH".',
+            examples: ["en", "de", "de-CH", "fr"],
+          }),
+          { description: "BCP 47 language tags for the languages this course is available in.", minItems: 1 },
+        ),
       ),
     }),
   ],

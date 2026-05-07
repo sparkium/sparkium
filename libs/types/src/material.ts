@@ -1,27 +1,85 @@
 import { Type, type Static } from "@sinclair/typebox";
 import { BaseSchema } from "./base.js";
 
-/**
- * Front-matter schema for individual eLearning materials (lessons, exercises, etc.).
- */
-export const MaterialSchema = Type.Composite(
+const FileResultSchema = Type.Object(
+  {
+    type: Type.Literal("file"),
+    allowedFileTypes: Type.Optional(
+      Type.Array(Type.String(), {
+        description: 'Accepted MIME types or file extensions (e.g. "image/png", ".pdf").',
+      }),
+    ),
+    maxFileSize: Type.Optional(Type.Integer({ minimum: 1, description: "Maximum allowed file size in bytes." })),
+  },
+  { additionalProperties: false },
+);
+
+const LinkResultSchema = Type.Object(
+  {
+    type: Type.Literal("link"),
+  },
+  { additionalProperties: false },
+);
+
+const TextResultSchema = Type.Object(
+  {
+    type: Type.Literal("text"),
+    minLength: Type.Optional(Type.Integer({ minimum: 0, description: "Minimum number of characters required." })),
+    maxLength: Type.Optional(Type.Integer({ minimum: 1, description: "Maximum number of characters allowed." })),
+  },
+  { additionalProperties: false },
+);
+
+export const ExerciseResultSchema = Type.Union([FileResultSchema, LinkResultSchema, TextResultSchema], {
+  discriminator: "type",
+  description: "Expected result type for the exercise.",
+});
+
+export type ExerciseResult = Static<typeof ExerciseResultSchema>;
+
+export const PageMaterialSchema = Type.Composite([BaseSchema, Type.Object({ type: Type.Literal("page") })], {
+  additionalProperties: false,
+});
+
+export const ExerciseMaterialSchema = Type.Composite(
   [
     BaseSchema,
     Type.Object({
-      type: Type.Optional(
-        Type.Union([Type.Literal("lesson"), Type.Literal("exercise"), Type.Literal("quiz"), Type.Literal("resource")], {
-          description: "Semantic type of the material.",
-        }),
-      ),
-      tags: Type.Optional(Type.Array(Type.String(), { description: "Free-form tags for categorization and search." })),
+      type: Type.Literal("exercise"),
+      result: Type.Optional(ExerciseResultSchema),
     }),
   ],
-  {
-    $id: "material",
-    title: "Material",
-    description: "Front-matter schema for a Sparkium eLearning material (lesson, exercise, etc.).",
-    additionalProperties: false,
-  },
+  { additionalProperties: false },
 );
+
+export const LinkMaterialSchema = Type.Composite(
+  [
+    BaseSchema,
+    Type.Object({
+      type: Type.Literal("link"),
+      href: Type.String({ format: "uri", description: "URL this material links to." }),
+    }),
+  ],
+  { additionalProperties: false },
+);
+
+export type PageMaterial = Static<typeof PageMaterialSchema>;
+export type ExerciseMaterial = Static<typeof ExerciseMaterialSchema>;
+export type LinkMaterial = Static<typeof LinkMaterialSchema>;
+
+// ---------------------------------------------------------------------------
+// Material union
+// ---------------------------------------------------------------------------
+
+/**
+ * Discriminated union of all Sparkium material types.
+ * Use the `type` field to determine the variant.
+ */
+export const MaterialSchema = Type.Union([PageMaterialSchema, ExerciseMaterialSchema, LinkMaterialSchema], {
+  $id: "material",
+  title: "Material",
+  description: "Front-matter schema for a Sparkium eLearning material.",
+  discriminator: "type",
+});
 
 export type Material = Static<typeof MaterialSchema>;
