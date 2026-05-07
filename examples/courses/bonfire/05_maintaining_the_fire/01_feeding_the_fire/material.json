@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "page",
+  "title": "Feeding the fire",
+  "description": "Learn when and how to add wood to keep your bonfire burning steadily.",
+  "keywords": [
+    "feeding",
+    "wood",
+    "fuel",
+    "maintenance",
+    "timing"
+  ]
+}

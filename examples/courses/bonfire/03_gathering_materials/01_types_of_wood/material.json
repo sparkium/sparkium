@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "page",
+  "title": "Types of wood",
+  "description": "Learn about different types of wood for your bonfire.",
+  "keywords": [
+    "wood",
+    "types",
+    "bonfire",
+    "firewood",
+    "outdoors"
+  ]
+}

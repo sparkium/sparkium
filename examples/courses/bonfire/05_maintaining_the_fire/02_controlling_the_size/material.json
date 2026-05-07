@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "page",
+  "title": "Controlling the size",
+  "description": "How to keep your fire at a safe and manageable size throughout your session.",
+  "keywords": [
+    "fire size",
+    "control",
+    "safety",
+    "heat",
+    "management"
+  ]
+}

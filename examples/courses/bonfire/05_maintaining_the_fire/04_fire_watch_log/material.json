@@ -1,0 +1,17 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "exercise",
+  "title": "Fire watch log",
+  "description": "Practice active monitoring by keeping a simple fire watch log during your next bonfire.",
+  "keywords": [
+    "fire watch",
+    "monitoring",
+    "log",
+    "practice",
+    "safety"
+  ],
+  "result": {
+    "type": "text",
+    "minLength": 80
+  }
+}

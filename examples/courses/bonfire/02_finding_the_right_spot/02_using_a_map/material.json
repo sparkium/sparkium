@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "page",
+  "title": "Use a map to find the right spot",
+  "description": "Learn how to use a map to find the best location for your bonfire.",
+  "keywords": [
+    "map",
+    "location",
+    "site selection",
+    "navigation",
+    "outdoors"
+  ]
+}

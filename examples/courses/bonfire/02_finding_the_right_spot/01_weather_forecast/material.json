@@ -1,0 +1,12 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "page",
+  "title": "Study the weather forecast",
+  "description": "Learn how to check the weather forecast before planning your bonfire.",
+  "keywords": [
+    "weather forecast",
+    "planning",
+    "safety",
+    "outdoor conditions"
+  ]
+}

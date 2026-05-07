@@ -1,0 +1,16 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "exercise",
+  "title": "Light your first fire",
+  "description": "Apply what you have learned and describe your experience lighting your first bonfire.",
+  "keywords": [
+    "practice",
+    "first fire",
+    "reflection",
+    "experience"
+  ],
+  "result": {
+    "type": "text",
+    "minLength": 100
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "exercise",
+  "title": "Packing List",
+  "description": "Learn about creating a packing list for a bonfire.",
+  "keywords": [
+    "packing",
+    "list",
+    "essentials",
+    "tools",
+    "materials"
+  ]
+}

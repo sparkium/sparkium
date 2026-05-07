@@ -1,0 +1,17 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "exercise",
+  "title": "Extinguishing checklist",
+  "description": "Confirm you completed every step of the extinguishing and clean-up procedure.",
+  "keywords": [
+    "checklist",
+    "extinguishing",
+    "cleanup",
+    "review",
+    "safety"
+  ],
+  "result": {
+    "type": "text",
+    "minLength": 60
+  }
+}

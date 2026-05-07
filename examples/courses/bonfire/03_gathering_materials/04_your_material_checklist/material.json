@@ -1,0 +1,17 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "exercise",
+  "title": "Your material checklist",
+  "description": "Check that you have gathered all the materials you need before heading out.",
+  "keywords": [
+    "checklist",
+    "materials",
+    "preparation",
+    "tinder",
+    "kindling"
+  ],
+  "result": {
+    "type": "text",
+    "minLength": 50
+  }
+}

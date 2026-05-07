@@ -16,7 +16,8 @@
         "github.vscode-github-actions",
         "GitHub.vscode-pull-request-github",
         "vunguyentuan.vscode-css-variables",
-        "yzhang.markdown-all-in-one"
+        "yzhang.markdown-all-in-one",
+        "redhat.vscode-yaml"
       ],
       "settings": {
         "remote.extensionKind": {

@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "exercise",
+  "title": "Styles of Bonfires",
+  "description": "Learn about different styles or types of bonfires.",
+  "keywords": [
+    "bonfire",
+    "fire",
+    "outdoor",
+    "camping"
+  ],
+  "result": {
+    "type": "text"
+  }
+}

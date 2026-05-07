@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "page",
+  "title": "Check for active fire bans",
+  "description": "How to quickly verify whether an open fire is currently permitted at your chosen location.",
+  "keywords": [
+    "fire ban",
+    "waldbrandgefahr",
+    "safety",
+    "regulations",
+    "Switzerland"
+  ]
+}

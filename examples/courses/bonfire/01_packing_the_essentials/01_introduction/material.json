@@ -1,0 +1,12 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "page",
+  "title": "Introduction",
+  "description": "Everything you need to know to get started with this course. On this page you learn what to expect from this course.",
+  "keywords": [
+    "introduction",
+    "course overview",
+    "expectations",
+    "getting started"
+  ]
+}

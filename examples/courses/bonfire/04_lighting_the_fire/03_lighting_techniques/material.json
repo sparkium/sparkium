@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "page",
+  "title": "Lighting techniques",
+  "description": "Step-by-step techniques for safely catching and transferring the first flame.",
+  "keywords": [
+    "ignition",
+    "lighting",
+    "tinder",
+    "kindling",
+    "technique"
+  ]
+}

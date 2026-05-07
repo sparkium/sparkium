@@ -1,6 +1,15 @@
 import { Type, type Static } from "@sinclair/typebox";
 import { BaseSchema } from "./base.js";
 
+const BodySchema = Type.Object({
+  body: Type.Optional(
+    Type.String({
+      format: "uri-reference",
+      description: "Relative path or URL to a Markdown (.md) or HTML (.html) file used as the body content.",
+    }),
+  ),
+});
+
 const FileResultSchema = Type.Object(
   {
     type: Type.Literal("file"),
@@ -37,13 +46,17 @@ export const ExerciseResultSchema = Type.Union([FileResultSchema, LinkResultSche
 
 export type ExerciseResult = Static<typeof ExerciseResultSchema>;
 
-export const PageMaterialSchema = Type.Composite([BaseSchema, Type.Object({ type: Type.Literal("page") })], {
-  additionalProperties: false,
-});
+export const PageMaterialSchema = Type.Composite(
+  [BaseSchema, BodySchema, Type.Object({ type: Type.Literal("page") })],
+  {
+    additionalProperties: false,
+  },
+);
 
 export const ExerciseMaterialSchema = Type.Composite(
   [
     BaseSchema,
+    BodySchema,
     Type.Object({
       type: Type.Literal("exercise"),
       result: Type.Optional(ExerciseResultSchema),

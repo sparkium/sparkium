@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "page",
+  "title": "Leave no trace",
+  "description": "Restore the site to its natural state so others — and wildlife — can enjoy it after you.",
+  "keywords": [
+    "leave no trace",
+    "cleanup",
+    "environment",
+    "ash",
+    "restoration"
+  ]
+}

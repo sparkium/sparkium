@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "page",
+  "title": "Legal requirements in Switzerland",
+  "description": "Know the rules before you light up — fire bans, protected zones, and cantonal regulations.",
+  "keywords": [
+    "legal",
+    "regulations",
+    "fire ban",
+    "Switzerland",
+    "cantonal rules"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "page",
+  "title": "Preparing the fire pit",
+  "description": "How to clear and prepare a safe fire pit before you light anything.",
+  "keywords": [
+    "fire pit",
+    "preparation",
+    "clearing",
+    "safety",
+    "ground"
+  ]
+}

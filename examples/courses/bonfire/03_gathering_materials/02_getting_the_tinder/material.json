@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "page",
+  "title": "Getting the tinder",
+  "description": "Learn about different types of tinder for your bonfire.",
+  "keywords": [
+    "tinder",
+    "types",
+    "bonfire",
+    "firewood",
+    "outdoors"
+  ]
+}

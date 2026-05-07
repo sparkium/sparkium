@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "page",
+  "title": "Step-by-step extinguishing",
+  "description": "The correct procedure for completely and safely putting out a bonfire.",
+  "keywords": [
+    "extinguishing",
+    "water",
+    "procedure",
+    "safety",
+    "coals"
+  ]
+}

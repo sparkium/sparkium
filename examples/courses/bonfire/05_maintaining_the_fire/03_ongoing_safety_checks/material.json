@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "page",
+  "title": "Ongoing safety checks",
+  "description": "The regular checks you should make while the fire is burning to catch problems early.",
+  "keywords": [
+    "safety",
+    "monitoring",
+    "checks",
+    "sparks",
+    "wind"
+  ]
+}

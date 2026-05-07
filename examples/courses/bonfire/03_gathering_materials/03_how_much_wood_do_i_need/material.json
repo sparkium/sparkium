@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "page",
+  "title": "How much wood do I need?",
+  "description": "Estimate the right amount of wood so your fire lasts as long as planned without waste.",
+  "keywords": [
+    "wood",
+    "quantity",
+    "estimation",
+    "fuel",
+    "planning"
+  ]
+}

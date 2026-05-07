@@ -1,0 +1,12 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "exercise",
+  "title": "Pinpoint the location",
+  "description": "Learn how to pinpoint the best location for your bonfire.",
+  "keywords": [
+    "location",
+    "site selection",
+    "navigation",
+    "outdoors"
+  ]
+}

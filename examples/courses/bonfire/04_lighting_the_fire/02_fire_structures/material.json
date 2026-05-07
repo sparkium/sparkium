@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "page",
+  "title": "Fire structures",
+  "description": "Learn the most common ways to stack wood — teepee, log cabin, and star fire — and when to use each.",
+  "keywords": [
+    "fire structures",
+    "teepee",
+    "log cabin",
+    "star fire",
+    "wood stacking"
+  ]
+}
