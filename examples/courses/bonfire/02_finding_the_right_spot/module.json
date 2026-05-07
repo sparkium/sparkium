@@ -1,0 +1,12 @@
+{
+  "$schema": "../../../../libs/types/dist/schemas/latest/module.json",
+  "title": "Finding the right spot",
+  "description": "How to choose a safe and legal location for your bonfire.",
+  "keywords": [
+    "location",
+    "safety",
+    "regulations",
+    "site selection",
+    "Switzerland"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../../../../libs/types/dist/schemas/latest/module.json",
+  "title": "Gathering the right materials",
+  "description": "Which wood and tinder to collect for a successful fire.",
+  "keywords": [
+    "wood",
+    "tinder",
+    "kindling",
+    "materials",
+    "fuel"
+  ]
+}

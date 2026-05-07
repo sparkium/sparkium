@@ -1,5 +1,25 @@
 {
   "$schema": "../../../libs/types/dist/schemas/latest/course.json",
   "title": "Mastering the Swiss Flame: Build Safe, Legal Bonfires",
-  "authors": []
+  "description": "Everything from choosing the right place, gathering materials, lighting, maintaining and extinguishing a bonfire safely and legally in Switzerland.",
+  "repository": "https://github.com/sparkium/sparkium/tree/main/examples/courses/bonfire",
+  "homepage": "https://github.com/sparkium/sparkium/tree/main/examples/courses/bonfire",
+  "version": "0.0.1",
+  "keywords": [
+    "bonfire",
+    "switzerland",
+    "outdoors",
+    "safety",
+    "legal",
+    "bushcraft"
+  ],
+  "languages": [
+    "en"
+  ],
+  "authors": [
+    {
+      "name": "Robin Bühler",
+      "email": "robin.buehler@c4h.ch"
+    }
+  ]
 }

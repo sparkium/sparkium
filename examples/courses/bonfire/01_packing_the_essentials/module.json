@@ -1,0 +1,12 @@
+{
+  "$schema": "../../../../libs/types/dist/schemas/latest/module.json",
+  "title": "Packing the essentials",
+  "description": "What tools and materials do you need to pack?",
+  "keywords": [
+    "packing",
+    "essentials",
+    "tools",
+    "materials",
+    "preparation"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../../../../libs/types/dist/schemas/latest/module.json",
+  "title": "Lighting the fire",
+  "description": "Step-by-step techniques for safely igniting your bonfire.",
+  "keywords": [
+    "ignition",
+    "fire starting",
+    "techniques",
+    "safety",
+    "lighting"
+  ]
+}
