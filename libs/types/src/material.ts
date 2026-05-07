@@ -1,32 +1,21 @@
 import { Type, type Static } from "@sinclair/typebox";
+import { BaseSchema } from "./base.js";
 
 /**
  * Front-matter schema for individual eLearning materials (lessons, exercises, etc.).
  */
-export const MaterialSchema = Type.Object(
-  {
-    $schema: Type.Optional(Type.String({ description: "JSON Schema reference URI." })),
-    title: Type.String({ minLength: 1, description: "Human-readable title of the material." }),
-    description: Type.Optional(Type.String({ description: "Short summary shown in navigation and previews." })),
-    type: Type.Optional(
-      Type.Union([Type.Literal("lesson"), Type.Literal("exercise"), Type.Literal("quiz"), Type.Literal("resource")], {
-        description: "Semantic type of the material.",
-      }),
-    ),
-    order: Type.Optional(
-      Type.Integer({
-        minimum: 0,
-        description: "Explicit sort order within the parent module. Lower numbers appear first.",
-      }),
-    ),
-    duration: Type.Optional(
-      Type.Integer({
-        minimum: 1,
-        description: "Estimated reading/viewing time in minutes.",
-      }),
-    ),
-    tags: Type.Optional(Type.Array(Type.String(), { description: "Free-form tags for categorization and search." })),
-  },
+export const MaterialSchema = Type.Composite(
+  [
+    BaseSchema,
+    Type.Object({
+      type: Type.Optional(
+        Type.Union([Type.Literal("lesson"), Type.Literal("exercise"), Type.Literal("quiz"), Type.Literal("resource")], {
+          description: "Semantic type of the material.",
+        }),
+      ),
+      tags: Type.Optional(Type.Array(Type.String(), { description: "Free-form tags for categorization and search." })),
+    }),
+  ],
   {
     $id: "material",
     title: "Material",

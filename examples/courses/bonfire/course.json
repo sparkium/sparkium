@@ -1,4 +1,5 @@
 {
   "$schema": "../../../libs/types/dist/schemas/latest/course.json",
-  "title": "Mastering the Swiss Flame: Build Safe, Legal Bonfires"
+  "title": "Mastering the Swiss Flame: Build Safe, Legal Bonfires",
+  "authors": []
 }

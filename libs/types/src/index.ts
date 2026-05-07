@@ -1,3 +1,4 @@
-export { CourseSchema, type Course } from "./course.js";
+export { BaseSchema, type Base } from "./base.js";
+export { CourseSchema, type Course, PersonSchema, type Person } from "./course.js";
 export { ModuleSchema, type Module } from "./module.js";
 export { MaterialSchema, type Material } from "./material.js";
