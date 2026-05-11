@@ -1,0 +1,25 @@
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# CI / tooling
+.github
+.changeset
+.devcontainer.json
+
+# Documentation and examples (not needed to build the server)
+docs
+examples
+assets
+*.md
+
+# Unrelated apps
+apps/website
+
+# Build artefacts — always rebuilt fresh inside Docker
+**/dist
+**/node_modules
+
+# Editor / IDE
+.vscode

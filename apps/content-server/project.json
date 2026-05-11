@@ -37,6 +37,22 @@
         "command": "tsc --noEmit -p tsconfig.json",
         "cwd": "{projectRoot}"
       }
+    },
+    "container": {
+      "executor": "@nx-tools/nx-container:build",
+      "options": {
+        "engine": "docker",
+        "load": true,
+        "push": false,
+        "tags": [
+          "sparkium/content-server:latest"
+        ],
+        "platforms": [
+          "linux/amd64"
+        ],
+        "context": "{workspaceRoot}",
+        "file": "apps/content-server/Dockerfile"
+      }
     }
   }
 }

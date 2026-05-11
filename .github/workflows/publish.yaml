@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  packages: write
   pages: write
   id-token: write
 
@@ -36,6 +37,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Capture content-server version (before)
+        id: cs-before
+        run: echo "version=$(jq -r .version apps/content-server/package.json)" >> "$GITHUB_OUTPUT"
+
       - name: Publish
         uses: changesets/action@v1
         id: changesets
@@ -46,8 +51,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
 
+      - name: Capture content-server version (after)
+        id: cs-after
+        run: echo "version=$(jq -r .version apps/content-server/package.json)" >> "$GITHUB_OUTPUT"
+
     outputs:
       publishedPackages: ${{ steps.changesets.outputs.publishedPackages }}
+      csVersionBefore: ${{ steps.cs-before.outputs.version }}
+      csVersionAfter: ${{ steps.cs-after.outputs.version }}
 
   deploy-schema:
     needs: publish
@@ -171,3 +182,19 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+
+  # ── Release content-server binaries + Docker images if its version changed ───
+  release-content-server:
+    needs: publish
+    if: >-
+      needs.publish.result == 'success' &&
+      needs.publish.outputs.csVersionAfter != '' &&
+      needs.publish.outputs.csVersionAfter != needs.publish.outputs.csVersionBefore
+    name: Release Content Server
+    uses: ./.github/workflows/release-content-server.yaml
+    with:
+      version: ${{ needs.publish.outputs.csVersionAfter }}
+    secrets: inherit
+    permissions:
+      contents: write
+      packages: write

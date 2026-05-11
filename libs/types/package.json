@@ -24,10 +24,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@sinclair/typebox": "^0.34.0"
+    "@sinclair/typebox": "^0.34.49"
   },
   "devDependencies": {
-    "tsx": "^4.19.4",
+    "tsx": "^4.21.0",
     "typescript": "^6.0.3"
   }
 }
