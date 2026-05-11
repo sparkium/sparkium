@@ -2,8 +2,9 @@ packages:
   - "apps/*"
   - "libs/*"
 
+allowBuilds:
+  esbuild: true
+  nx: true
+  sharp: true
+
 autoInstallPeers: true
-onlyBuiltDependencies:
-  - esbuild
-  - nx
-  - sharp
