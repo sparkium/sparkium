@@ -1,0 +1,22 @@
+{
+  "name": "@sparkium/content-server",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "build": "bun build src/index.ts --target bun --outdir dist",
+    "compile": "bun build src/index.ts --compile --outfile dist/content-server",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.34.0",
+    "@sparkium/types": "workspace:*",
+    "elysia": "^1.2.0",
+    "isomorphic-git": "^1.27.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^6.0.3"
+  }
+}

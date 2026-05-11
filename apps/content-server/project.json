@@ -1,0 +1,42 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "@sparkium/content-server",
+  "projectType": "application",
+  "sourceRoot": "apps/content-server/src",
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "bun --watch src/index.ts",
+        "cwd": "{projectRoot}"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "outputs": [
+        "{projectRoot}/dist"
+      ],
+      "options": {
+        "command": "bun build src/index.ts --target bun --outdir dist",
+        "cwd": "{projectRoot}"
+      }
+    },
+    "compile": {
+      "executor": "nx:run-commands",
+      "outputs": [
+        "{projectRoot}/dist/content-server"
+      ],
+      "options": {
+        "command": "bun build src/index.ts --compile --outfile dist/content-server",
+        "cwd": "{projectRoot}"
+      }
+    },
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsc --noEmit -p tsconfig.json",
+        "cwd": "{projectRoot}"
+      }
+    }
+  }
+}
