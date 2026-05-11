@@ -23,15 +23,15 @@ export default defineConfig({
       sidebar: [
         {
           label: "Start here",
-          autogenerate: { directory: "start-here" },
+          items: [{ autogenerate: { directory: "start-here" } }],
         },
         {
           label: "Guide",
-          autogenerate: { directory: "guide", attrs: { "data-chapter-group": true } },
+          items: [{ autogenerate: { directory: "guide", attrs: { "data-chapter-group": true } } }],
         },
         {
           label: "Ecosystem",
-          autogenerate: { directory: "ecosystem" },
+          items: [{ autogenerate: { directory: "ecosystem" } }],
         },
       ],
     }),
