@@ -36,6 +36,10 @@ jobs:
           cache: pnpm
           cache-dependency-path: ${{ env.BUILD_PATH }}/pnpm-lock.yaml
 
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
         working-directory: ${{ env.BUILD_PATH }}
