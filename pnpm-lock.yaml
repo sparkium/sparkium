@@ -21,8 +21,8 @@ importers:
         specifier: ^8.59.2
         version: 8.61.1(eslint@10.5.0(jiti@2.7.0))(typescript@6.0.3)
       astro-eslint-parser:
-        specifier: ^1.4.0
-        version: 1.4.0
+        specifier: ^2.0.0
+        version: 2.0.0
       eslint:
         specifier: ^10.3.0
         version: 10.5.0(jiti@2.7.0)
@@ -2273,6 +2273,10 @@ packages:
     resolution: {integrity: sha512-+QDcgc7e+au6EZ0YjMmRRjNoQo5bDMlaR45aWDoFsuxQTCM9qmCHRoiKJPELgckJ8Wmr7vcfpa9eCDHBFh6G4w==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
+  astro-eslint-parser@2.0.0:
+    resolution: {integrity: sha512-wqHbAbrtUvugx7EAcc2kPmwbX6/I2/cqAxKEhFAz/9uwcqrG8khH/reipvtqbGPx1Vxdst08lvHoF4ECtVpcTA==}
+    engines: {node: ^22.22.3 || ^24.16.0 || >=26.3.0}
+
   astro-expressive-code@0.43.1:
     resolution: {integrity: sha512-xddgwQxFRwpnnAnU7kSfrO82SsOAq7sQrYpXxVcrN9k/0aqNlTH2+mLrOMm1wXm6jdFKepst3hd8/qWojwuunw==}
     peerDependencies:
@@ -2736,6 +2740,10 @@ packages:
   entities@7.0.1:
     resolution: {integrity: sha512-TWrgLOFUQTH994YUyl1yT4uyavY5nNB5muff+RtWaqNVCAK408b5ZnnbNAUEWLTCpum9w6arT70i1XdQ4UeOPA==}
     engines: {node: '>=0.12'}
+
+  entities@8.0.0:
+    resolution: {integrity: sha512-zwfzJecQ/Uej6tusMqwAqU/6KL2XaB2VZ2Jg54Je6ahNBGNH6Ek6g3jjNCF0fG9EWQKGZNddNjU5F1ZQn/sBnA==}
+    engines: {node: '>=20.19.0'}
 
   error-ex@1.3.4:
     resolution: {integrity: sha512-sqQamAnR14VgCr1A618A3sGrygcpK+HEbenA/HiEAkkUwcZIIB/tgWqHFxWgOyDh4nB4JCRimh79dR5Ywc9MDQ==}
@@ -7197,6 +7205,23 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  astro-eslint-parser@2.0.0:
+    dependencies:
+      '@astrojs/compiler': 4.0.0
+      '@typescript-eslint/scope-manager': 8.61.1
+      '@typescript-eslint/types': 8.61.1
+      astrojs-compiler-sync: 1.1.1(@astrojs/compiler@4.0.0)
+      debug: 4.4.3
+      entities: 8.0.0
+      eslint-scope: 9.1.2
+      eslint-visitor-keys: 5.0.1
+      espree: 11.2.0
+      fast-glob: 3.3.3
+      is-glob: 4.0.3
+      semver: 7.8.4
+    transitivePeerDependencies:
+      - supports-color
+
   astro-expressive-code@0.43.1(astro@6.4.8(@types/node@25.6.2)(jiti@2.7.0)(rollup@4.62.0)(tsx@4.22.4)(yaml@2.9.0)):
     dependencies:
       astro: 6.4.8(@types/node@25.6.2)(jiti@2.7.0)(rollup@4.62.0)(tsx@4.22.4)(yaml@2.9.0)
@@ -7300,6 +7325,11 @@ snapshots:
       '@astrojs/compiler': 3.0.1
       synckit: 0.11.13
 
+  astrojs-compiler-sync@1.1.1(@astrojs/compiler@4.0.0):
+    dependencies:
+      '@astrojs/compiler': 4.0.0
+      synckit: 0.11.13
+
   async-lock@1.4.1: {}
 
   asynckit@0.4.0: {}
@@ -7310,7 +7340,7 @@ snapshots:
 
   axios@1.15.0:
     dependencies:
-      follow-redirects: 1.15.11
+      follow-redirects: 1.16.0
       form-data: 4.0.5
       proxy-from-env: 2.1.0
     transitivePeerDependencies:
@@ -7414,7 +7444,7 @@ snapshots:
 
   brace-expansion@5.0.2:
     dependencies:
-      balanced-match: 4.0.3
+      balanced-match: 4.0.4
 
   brace-expansion@5.0.6:
     dependencies:
@@ -7733,6 +7763,8 @@ snapshots:
 
   entities@7.0.1: {}
 
+  entities@8.0.0: {}
+
   error-ex@1.3.4:
     dependencies:
       is-arrayish: 0.2.1
@@ -7764,7 +7796,7 @@ snapshots:
   esast-util-from-js@2.0.1:
     dependencies:
       '@types/estree-jsx': 1.0.5
-      acorn: 8.16.0
+      acorn: 8.17.0
       esast-util-from-estree: 2.0.0
       vfile-message: 4.0.3
 
@@ -7923,8 +7955,8 @@ snapshots:
 
   espree@10.4.0:
     dependencies:
-      acorn: 8.16.0
-      acorn-jsx: 5.3.2(acorn@8.16.0)
+      acorn: 8.17.0
+      acorn-jsx: 5.3.2(acorn@8.17.0)
       eslint-visitor-keys: 4.2.1
 
   espree@11.2.0:
@@ -8948,8 +8980,8 @@ snapshots:
 
   micromark-extension-mdxjs@3.0.0:
     dependencies:
-      acorn: 8.16.0
-      acorn-jsx: 5.3.2(acorn@8.16.0)
+      acorn: 8.17.0
+      acorn-jsx: 5.3.2(acorn@8.17.0)
       micromark-extension-mdx-expression: 3.0.1
       micromark-extension-mdx-jsx: 3.0.2
       micromark-extension-mdx-md: 2.0.0
