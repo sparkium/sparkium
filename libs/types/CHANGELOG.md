@@ -1,5 +1,11 @@
 # @sparkium/types
 
+## 0.0.19
+
+### Patch Changes
+
+- 9dd1f68: Add base schema
+
 ## 0.0.18
 
 ### Patch Changes
