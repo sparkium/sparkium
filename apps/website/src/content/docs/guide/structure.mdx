@@ -13,16 +13,25 @@ import { FileTree } from '@astrojs/starlight/components';
 
 The hierarchy of your materials is determined by the folder structure. Each folder represents a level of organization, and the files within those folders represent the content.
 
-The **root folder** is the starting point. This folder represents the entire eLearning project or course. Inside the root folder, you can create subfolders to further structure project. For example, you might have a folder for each module of your course, and within those folders, you might have files for each lesson or topic.
+The **root folder** is the starting point. This folder represents the entire eLearning project or course. Inside the root folder, you can create subfolders to further structure project. For example, you might have a folder for each module of your course, and within those folders, you might have files (materials) for each lesson or topic.
 
 <FileTree>
 
 - mastering-the-swiss-flame
   - module-1
-    - lesson-1.md
-    - lesson-2.md
+    - material-1
+      - content.md
+      - material.json
+    - material-2
+      - content.md
+      - material.json
+    - module-1.json
   - module-2
-    - lesson-1.md
-    - lesson-2.md
+    - material
+      - content.pdf
+      - material.json
+    - module-2.json
+  - module-3
+    - material/
 
 </FileTree>
