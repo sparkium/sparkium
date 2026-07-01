@@ -1,9 +1,83 @@
 ---
 title: Course
-description: Creation of individual course with Sparkium.
+description: The root folder that represents your entire eLearning project.
 sidebar:
   order: 2
 ---
 
-## Introduction
-The top folder of Sparkium file system represents a full course. You may want to have separate modules in a course, and a course folder contains all the relevant modules inside it.
+import { FileTree } from "@astrojs/starlight/components";
+import { Aside } from "@astrojs/starlight/components";
+
+**A course is the root of everything.** It's the top-level folder that holds your entire eLearning project -- every module, every material, and the settings that describe the course as a whole.
+
+## Creating a course
+
+Creating a course is as simple as creating a folder. The folder's name is the course's identifier, so keep it lowercase and hyphenated:
+
+<FileTree>
+- your-course-name/
+</FileTree>
+
+<Aside type="tip">
+  Use a short, url-friendly name (`intro-to-baking`, not `Intro to Baking!`). Spaces and special characters can cause
+  issues when the course is published.
+</Aside>
+
+## Configuration
+
+Every course has a `course.json` at its root. It describes the course as a whole -- the parts that don't belong to any single module. If you've worked with Node projects, it'll feel familiar: it's shaped much like a `package.json`.
+
+```json
+// course.json
+{
+  "$schema": "../../../libs/types/dist/schemas/latest/course.json",
+  "title": "Mastering the Swiss Flame: Build Safe, Legal Bonfires",
+  "description": "Everything from choosing the right place, gathering materials, lighting, maintaining and extinguishing a bonfire safely and legally in Switzerland.",
+  "repository": "https://github.com/sparkium/sparkium/tree/main/examples/courses/bonfire",
+  "homepage": "https://github.com/sparkium/sparkium/tree/main/examples/courses/bonfire",
+  "version": "0.0.1",
+  "keywords": ["bonfire", "switzerland", "outdoors", "safety", "legal", "bushcraft"],
+  "languages": ["en"],
+  "authors": [
+    { "name": "John Doe", "email": "john.doe@c4h.ch" }
+  ]
+}
+```
+
+| Field | Description |
+| --- | --- |
+| `$schema` | Path to the schema that validates this file. |
+| `title` | The course's display name, shown to learners. |
+| `description` | A short summary of what the course covers. |
+| `repository` | Link to the course's source, if it lives in version control. |
+| `homepage` | The course's landing page. |
+| `version` | The course version, following [semver](https://semver.org/). |
+| `keywords` | Terms that help learners discover the course. |
+| `languages` | The languages the course is available in. |
+| `authors` | Who created the course -- each with a `name` and `email`. |
+
+<Aside type="tip">
+Leave the `$schema` line in place. It tells your editor which fields are valid,
+so you get autocomplete and catch typos before publishing.
+</Aside>
+
+## What a course contains
+
+Inside the course folder, you organize content into **modules** -- one folder
+per module. A course is really just a collection of modules plus its own
+configuration:
+
+<FileTree>
+- mastering-the-swiss-flame
+  - course.json
+  - module-1/
+  - module-2/
+  - module-3/
+</FileTree>
+
+## What's next
+
+You've got the outermost layer. The next step down is the **module** -- how you
+group related materials into a single unit.
+
+→ Continue to [Modules](/module/)
