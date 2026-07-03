@@ -1,0 +1,89 @@
+---
+title: Course
+description: The root folder that represents your entire eLearning project.
+sidebar:
+  order: 2
+---
+
+import { FileTree } from "@astrojs/starlight/components";
+import { Aside } from "@astrojs/starlight/components";
+
+**A course is the root of everything.** It's the top-level folder that holds your entire eLearning project -- every module, every material, and the metadata that describe说 the course as a whole.
+Throughout these docs, we'll build a single example course together -- *Mastering the Swiss Flame*, a guide to safe and legal bonfires in Switzerland -- so you can see each concept in a real project.
+
+## Creating a course
+
+A course starts as a folder. Everything else -- modules, materials, and configuration -- lives inside it. The folder's name is the course's identifier, so keep it lowercase and hyphenated:
+
+<FileTree>
+- bonfire/
+</FileTree>
+
+<Aside type="tip">
+  Use a short, url-friendly name (`bonfire` or `intro-to-bonfire`, not `Intro to Bonfire!`). Spaces and special characters can cause issues when the course is published.
+</Aside>
+
+## Metadata
+
+Every course has a `course.json` at its root. It describes the course as a whole -- the parts that don't belong to any single module. If you've worked with Node projects, it'll feel familiar: it's shaped much like a `package.json`.
+
+```json
+// course.json
+{
+  "$schema": "https://schema.sparkium.org/0.0.18/course.json",
+  "title": "Mastering the Swiss Flame: Build Safe, Legal Bonfires",
+  "description": "Everything from choosing the right place, gathering materials, lighting, maintaining and extinguishing a bonfire safely and legally in Switzerland.",
+  "repository": "https://github.com/sparkium/sparkium/tree/main/examples/courses/bonfire",
+  "homepage": "https://github.com/sparkium/sparkium/tree/main/examples/courses/bonfire",
+  "version": "0.0.1",
+  "keywords": [
+    "bonfire",
+    "switzerland",
+    "outdoors",
+    "safety",
+    "legal",
+    "bushcraft"],
+  "languages": ["en"],
+  "authors": [
+    {
+      "name": "Robin Bühler",
+      "email": "robin.buehler@c4h.ch"
+    }
+  ]
+}
+```
+
+| Field | Required | Description |
+| --- | --- | --- |
+| `$schema` | -- | JSON Schema reference URI. |
+| `title` | **Yes** | Human-readable title of the course. Must not be empty. |
+| `description` | -- | A short summary of the course. Helps people discover your content. |
+| `keywords` | -- | A list of terms that help people discover your content. |
+| `version` | -- | The course version. Must be parseable by [node-semver](https://github.com/npm/node-semver). |
+| `authors` | -- | The people who authored the course. |
+| `homepage` | -- | URL of the course homepage. |
+| `repository` | -- | Where the course's source lives. |
+| `languages` | -- | The languages the course is available in, as [BCP 47](https://www.rfc-editor.org/info/bcp47) tags (e.g. `en`, `de`, `de-CH`). At least one if present. |
+
+<Aside type="tip">
+Only `title` is required -- every other field is optional. When you do set `languages`, use BCP 47 tags like `en` or `de-CH`, not language names like "English".
+</Aside>
+
+## What a course contains
+
+Inside the course folder, you organize content into **modules** -- one folder per module. A course is really just a collection of modules plus its own configuration:
+
+<FileTree>
+- bonfire
+  - course.json
+  - 01_packing_the_essentials/
+  - 02_finding_the_right_spot/
+  - 03_gathering_materials/
+  - 04_lighting_the_fire/
+  - 05_maintaining_the_fire/
+  - 06_extinguishing_the_fire/
+</FileTree>
+
+## What's next
+
+You've got the outermost layer. The next step down is the **module** -- how you group related materials into a single unit.
