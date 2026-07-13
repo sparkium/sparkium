@@ -33,28 +33,28 @@
   counter-reset: sl-h2counter 0;
 }
 
-[data-chapter-number] .sl-markdown-content h2 {
+[data-chapter-number] .sl-markdown-content .sl-heading-wrapper.level-h2 {
   counter-increment: sl-h2counter;
   counter-reset: sl-h3counter 0;
 }
 
-[data-chapter-number] .sl-markdown-content h2::before {
+[data-chapter-number] .sl-markdown-content .sl-heading-wrapper.level-h2 h2::before {
   content: counter(sl-chapter) "." counter(sl-h2counter) "\00a0";
 }
 
-[data-chapter-number] .sl-markdown-content h3 {
+[data-chapter-number] .sl-markdown-content .sl-heading-wrapper.level-h3 {
   counter-increment: sl-h3counter;
   counter-reset: sl-h4counter 0;
 }
 
-[data-chapter-number] .sl-markdown-content h3::before {
+[data-chapter-number] .sl-markdown-content .sl-heading-wrapper.level-h3 h3::before {
   content: counter(sl-chapter) "." counter(sl-h2counter) "." counter(sl-h3counter) "\00a0";
 }
 
-[data-chapter-number] .sl-markdown-content h4 {
+[data-chapter-number] .sl-markdown-content .sl-heading-wrapper.level-h4 {
   counter-increment: sl-h4counter;
 }
 
-[data-chapter-number] .sl-markdown-content h4::before {
+[data-chapter-number] .sl-markdown-content .sl-heading-wrapper.level-h4 h4::before {
   content: counter(sl-chapter) "." counter(sl-h2counter) "." counter(sl-h3counter) "." counter(sl-h4counter) "\00a0";
 }

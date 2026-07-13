@@ -1,8 +1,76 @@
 ---
 title: Module
-description: 
+description: A folder that groups related materials into a single unit of a course.
 sidebar:
   order: 3
 ---
 
-import { FileTree } from '@astrojs/starlight/components';
+import { FileTree } from "@astrojs/starlight/components";
+import { Aside } from "@astrojs/starlight/components";
+
+**A module is a unit of a course.** A module folder groups related materials together -- you can see it as a single stage of the learning journey, whereas a course can be seen as an ordered collection of modules.
+
+Continuing with our example course *Mastering the Swiss Flame*, each step of building a bonfire is its own module: packing the essentials, finding the right spot, gathering materials, and so on.
+
+## Creating a module
+
+Like a course, a module appears as a folder. You create it inside the course folder, and its materials and metadata all live inside it.
+
+Module folders are ordered by a numeric prefix, so learners move through them in the right sequence:
+
+<FileTree>
+- bonfire
+  - course.json
+  - 01_packing_the_essentials/
+    - module.json
+    - 01_introduction/
+  - 02_finding_the_right_spot/
+  - 03_gathering_materials/
+  - ...
+</FileTree>
+
+<Aside type="tip">
+  The `NN_` prefix controls the order modules appear in. Keep the rest of the name lowercase and hyphenated or underscored (`01_packing_the_essentials`, not `1. Packing the Essentials!`).
+</Aside>
+
+## Metadata
+
+Every module has a `module.json` at its root. It describes the module as a whole.
+
+```json
+// module.json
+{
+  "$schema": "https://schema.sparkium.org/0.0.18/module.json",
+  "title": "Packing the essentials",
+  "description": "What tools and materials do you need to pack?",
+  "keywords": ["packing", "essentials", "tools", "materials", "preparation"]
+}
+```
+
+| Field | Required | Description |
+| --- | --- | --- |
+| `$schema` | -- | JSON Schema reference URI. |
+| `title` | **Yes** | Human-readable title of the module. Must not be empty. |
+| `description` | -- | A short summary of the module. Helps people discover your content. |
+| `keywords` | -- | A list of terms that help people discover your content. |
+
+<Aside type="tip">
+  A `module.json` is much lighter than a `course.json` -- only `title` is required, and things like version, authors, and languages live at the course level, not here.
+</Aside>
+
+## What a module contains
+
+Inside a module folder, you organize content into **materials** -- one folder per material -- alongside the module's own metadata JSON file:
+
+<FileTree>
+- 01_packing_the_essentials
+  - module.json
+  - 01_introduction/
+  - 02_styles_of_bonfires/
+  - 03_packing_list/
+  - 04_legal_requirements/
+</FileTree>
+
+## What's next
+
+You've now seen the middle of the hierarchy. The last step down is the **material** -- a single piece of content used in your module.

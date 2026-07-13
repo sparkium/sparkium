@@ -7,7 +7,7 @@ sidebar:
 
 import { FileTree } from '@astrojs/starlight/components';
 
-**In Sparkium, the organization of your course content happens through the file system.** The structuring should feel natural and intuitive, like when you organize your personal files on your computer. This approach allows you to easily manage and navigate everything without needing to learn a complex system.
+**In Sparkium, the organization of your eLearning materials happens through the file system.** The structuring should feel natural and intuitive, like when you organize your personal files on your computer. This approach allows you to easily manage and navigate everything without needing to learn a complex system.
 
 ## Hierarchy
 
@@ -18,25 +18,25 @@ The **root folder** is the starting point. This folder represents your entire **
 <FileTree>
 
 - course
-  - module-1
-    - material-1
-      - content.md
-      - material.json
-    - material-2
-      - content.md
-      - material.json
-    - module.json
-  - module-2
-    - material
-      - content.pdf
-      - material.json
-    - module.json
-  - module-3
-    - material
-      - content.mp4
-      - material.json
-    - module.json
   - course.json
+  - module-1
+    - module.json
+    - material-1
+      - material.json
+      - content.md
+    - material-2
+      - material.json
+      - content.md
+  - module-2
+    - module.json
+    - material
+      - material.json
+      - content.pdf
+  - module-3
+    - module.json
+    - material
+      - material.json
+      - content.mp4
 
 </FileTree>
 
@@ -44,6 +44,6 @@ The **root folder** is the starting point. This folder represents your entire **
 
 You've now seen how the file system maps to your course. Each level in this hierarchy has its own role, and the following sections break them down one by one:
 
-- **[Course](/course/)** -- the root folder that represents your entire course.
-- **[Module](/module/)** -- a folder grouping related materials into one unit.
-- **[Material](/material/)** -- the materials used in each module.
+- **[Course](/guide/course/)** -- the root folder that represents your entire course.
+- **[Module](/guide/module/)** -- a folder grouping related materials into one unit.
+- **[Material](/guide/material/)** -- the materials used in each module.

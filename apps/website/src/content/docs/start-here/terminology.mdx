@@ -1,0 +1,70 @@
+---
+title: Terminology
+description: The words we use for each part of a Sparkium course, and what they mean.
+sidebar:
+  order: 5
+---
+
+import { FileTree } from "@astrojs/starlight/components";
+import { Aside } from "@astrojs/starlight/components";
+
+**"eLearning materials" is our umbrella term.** It covers everything used to teach a course -- every teaching item, from a written explanation to a PDF handout to a video. When we talk about "materials" in the broad sense, we mean all of this content taken together.
+
+To keep that content organized, Sparkium gives it a structure with three levels: a **course**, which contains **modules**, which in turn contain individual **materials**. Each level is a folder, and each carries a small JSON file that holds its metadata.
+
+We'll use our example course *Mastering the Swiss Flame* -- a guide to safe, legal bonfires in Switzerland -- to show how the three fit together.
+
+<FileTree>
+- bonfire
+  - course.json
+  - 01_packing_the_essentials
+    - module.json
+    - 01_tools
+      - content.md
+      - material.json
+    - 02_clothing
+      - content.md
+      - material.json
+  - 02_finding_the_right_spot
+    - module.json
+    - 01_terrain
+      - content.md
+      - material.json
+  - ...
+</FileTree>
+
+## Course
+
+A **course** is the whole thing -- the top level. It's a package of modules that together make up one complete learning experience. In the file system it's the root folder, and its metadata lives in `course.json` (title, description, authors, and so on).
+
+If it helps: a course is to its modules what a book is to its chapters. It doesn't hold lesson content directly; it holds modules.
+
+## Module
+
+A **module** is a collection of materials grouped into a single unit -- one stage or theme within the course. In *Mastering the Swiss Flame*, "Packing the essentials" and "Finding the right spot" are each a module.
+
+A module is a folder inside the course, and its metadata lives in `module.json`. Like a course, a module doesn't hold lesson content directly; it holds materials.
+
+<Aside type="caution" title="Open question">
+Should a module be able to contain sub-modules, so very large courses can be broken down into more levels? Not yet decided -- to discuss.
+</Aside>
+
+## Material
+
+A **material** is a single piece of content -- the level where actual content lives. Most materials are a folder holding the content itself (`content.md`, `content.pdf`, `content.mp4`, or similar) alongside a `material.json` with its metadata.
+
+<Aside type="note">
+Note the two senses of the word "material." In the broad sense, "eLearning materials" means *all* the teaching content in a course. As a level in the hierarchy, a **material** means one specific teaching item -- a single lesson, stored in its own folder. When the docs say "material," they mean the level.
+</Aside>
+
+## At a glance
+
+To summarize the three levels and where their metadata lives:
+
+| Term | What it is | Contains | Metadata file |
+| --- | --- | --- | --- |
+| **Course** | The whole course; the root | Modules | `course.json` |
+| **Module** | A unit within the course | Materials | `module.json` |
+| **Material** | A single piece of content | The content file(s) | `material.json` |
+
+Every level is a folder, and every folder carries its own JSON metadata. The content itself -- the thing a learner actually reads or watches -- only ever lives at the material level.

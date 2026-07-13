@@ -8,24 +8,24 @@ sidebar:
 import { FileTree } from "@astrojs/starlight/components";
 import { Aside } from "@astrojs/starlight/components";
 
-**A course is the root of everything.** It's the top-level folder that holds your entire eLearning project -- every module, every material, and the metadata that describe说 the course as a whole.
-Throughout these docs, we'll build a single example course together -- *Mastering the Swiss Flame*, a guide to safe and legal bonfires in Switzerland -- so you can see each concept in a real project.
+**A course is the root of everything.** It's the top-level folder that holds your entire eLearning project -- every module, every material, and the metadata that describe the course as a whole.
+Throughout these docs, we'll build a single example course together, with the topic "Mastering the Swiss Flame, Build Safe, Legal Bonfires" -- so you can see each concept in a real project.
 
 ## Creating a course
 
-A course starts as a folder. Everything else -- modules, materials, and configuration -- lives inside it. The folder's name is the course's identifier, so keep it lowercase and hyphenated:
+A course starts as a folder. Everything else -- modules, materials, and configuration -- lives inside it. The folder's name is the course's identifier, so keep it lowercase (if needed, using underscores to separate words). In this example, we can name our course **bonfire**:
 
 <FileTree>
 - bonfire/
 </FileTree>
 
 <Aside type="tip">
-  Use a short, url-friendly name (`bonfire` or `intro-to-bonfire`, not `Intro to Bonfire!`). Spaces and special characters can cause issues when the course is published.
+  Use a short, url-friendly name (`bonfire` or `intro_to_bonfire`, not `Intro to Bonfire!`). Spaces and special characters can cause issues when the course is published.
 </Aside>
 
 ## Metadata
 
-Every course has a `course.json` at its root. It describes the course as a whole -- the parts that don't belong to any single module. If you've worked with Node projects, it'll feel familiar: it's shaped much like a `package.json`.
+Every course has a `course.json` at its root. It describes the course as a whole and provides important metadata links to the course. If you've worked with Node projects, it'll feel familiar: it's shaped much like a `package.json`. The `course.json` for our *Mastering the Swiss Flame* course may look like:
 
 ```json
 // course.json
@@ -60,7 +60,7 @@ Every course has a `course.json` at its root. It describes the course as a whole
 | `description` | -- | A short summary of the course. Helps people discover your content. |
 | `keywords` | -- | A list of terms that help people discover your content. |
 | `version` | -- | The course version. Must be parseable by [node-semver](https://github.com/npm/node-semver). |
-| `authors` | -- | The people who authored the course. |
+| `authors` | -- | List of people who authored this course. |
 | `homepage` | -- | URL of the course homepage. |
 | `repository` | -- | Where the course's source lives. |
 | `languages` | -- | The languages the course is available in, as [BCP 47](https://www.rfc-editor.org/info/bcp47) tags (e.g. `en`, `de`, `de-CH`). At least one if present. |

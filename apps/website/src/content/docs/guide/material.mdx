@@ -1,0 +1,133 @@
+---
+title: Material
+description: A single piece of content -- the leaf of the hierarchy, where your content lives.
+sidebar:
+  order: 4
+---
+
+import { FileTree } from "@astrojs/starlight/components";
+import { Aside } from "@astrojs/starlight/components";
+
+**A material is a single piece of content.** It's the leaf of the hierarchy -- the level where your actual content lives. A material can be almost anything a learner reads, watches, or listens to: a Markdown text, a PDF, a video, an audio clip.
+
+A module can contain many materials, and each one is self-contained: it gets its own folder, holding a single piece of content together with the `material.json` that describes it.
+
+Continuing with *Mastering the Swiss Flame*, the "Packing the essentials" module contains several materials -- an introduction to read, a packing list to submit, a link to the legal requirements:
+
+<FileTree>
+- 01_packing_the_essentials
+  - module.json
+  - 01_introduction
+    - material.json
+    - content.md
+  - 02_styles_of_bonfires
+    - material.json
+    - content.md
+  - 03_packing_list
+    - material.json
+    - content.md
+  - 04_legal_requirements
+    - material.json
+</FileTree>
+
+## Common fields
+
+Every material has a `type`, which decides what else it needs. But a few fields apply to every material, whatever its type:
+
+| Field | Required | Description |
+| --- | --- | --- |
+| `$schema` | -- | JSON Schema reference URI. |
+| `title` | **Yes** | Human-readable title of the material. Must not be empty. |
+| `type` | **Yes** | `page`, `exercise`, or `link`. |
+| `description` | -- | A short summary. Helps people discover your content. |
+| `keywords` | -- | A list of terms that help people discover your content. |
+
+<Aside type="note">
+  `type` is a discriminator: it's required, and it determines which other fields are valid. Set it first, then fill in the fields that type calls for.
+</Aside>
+
+## Material types
+
+There are three types of material. Each serves a different purpose and needs a different field:
+
+| Type | Purpose | Needs |
+| --- | --- | --- |
+| `page` | Content the learner reads or watches | its `content` file |
+| `exercise` | A task the learner completes and submits | an optional `result` |
+| `link` | A pointer to an external resource | a required `href` |
+
+### Page
+
+A **page** is content the learner reads or watches. The content itself lives in the `content.md` sitting next to the `material.json`, so the JSON just needs to describe it. This is the introduction from our example course:
+
+```json
+// 01_introduction/material.json
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "page",
+  "title": "Introduction",
+  "description": "Everything you need to know to get started with this course. On this page you learn what to expect from this course.",
+  "keywords": [
+    "introduction",
+    "course overview",
+    "expectations",
+    "getting started"
+  ]
+}
+```
+
+### Exercise
+
+An **exercise** asks the learner to do something. The prompt lives in its `content.md`. Optionally, a `result` describes what a valid submission looks like -- it can be a file, some text, or a link:
+
+| `result.type` | The learner submits | Options |
+| --- | --- | --- |
+| `file` | an uploaded file | `allowedFileTypes`, `maxFileSize` (bytes) |
+| `text` | typed text | `minLength`, `maxLength` |
+| `link` | a URL | -- |
+
+The packing-list exercise asks for a written list:
+
+```json
+// 03_packing_list/material.json
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "exercise",
+  "title": "Packing List",
+  "description": "Learn about creating a packing list for a bonfire.",
+  "keywords": [
+    "packing",
+    "list",
+    "essentials",
+    "tools",
+    "materials"
+  ]
+}
+```
+
+<Aside type="tip">
+  Both `page` and `exercise` materials can include an optional `body` -- a relative path or URL to a Markdown (`.md`) or HTML (`.html`) file. You only need it to point somewhere other than the default `content.md`; most materials leave it out.
+</Aside>
+
+### Link
+
+A **link** sends the learner to an external resource. It has no content file of its own -- just a required `href`:
+
+```json
+// 04_legal_requirements/material.json
+{
+  "$schema": "../../../../../libs/types/dist/schemas/latest/material.json",
+  "type": "link",
+  "title": "Cantonal fire regulations",
+  "description": "The official rules for open fires in your canton.",
+  "href": "https://www.ch.ch/en/fire-regulations"
+}
+```
+
+<Aside type="tip">
+  The schema is strict (`additionalProperties: false`), so only the fields listed for a given type are allowed. A `link` can't have a `body`, and a `page` can't have a `result`. If validation fails, check that every field belongs to the `type` you chose.
+</Aside>
+
+## What's next
+
+That completes the hierarchy: a **course** holds **modules**, a module holds **materials**, and a material holds one piece of content. With `material.json` you describe each piece so Sparkium knows what it is -- a page to read, an exercise to complete, or a link to follow.
